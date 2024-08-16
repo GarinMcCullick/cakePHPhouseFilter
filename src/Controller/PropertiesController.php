@@ -100,4 +100,9 @@ class PropertiesController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+    public function view($id = null)
+    {
+        $property = $this->Properties->get($id);
+        $this->set(compact('property'));
+    }
 }
